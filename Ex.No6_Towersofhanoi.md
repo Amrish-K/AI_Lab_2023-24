@@ -53,6 +53,29 @@ move(N,X,Y,Z) :-
 ### Result:
 Thus the solution of Towers of Hanoi problem was found by logic programming.
 
+```
+move(1,X,Y,_) :-
+ write('Move top disk from '),
+ write(X),
+ write(' to '),
+ write(Y),
+ nl.
+move(N,X,Y,Z) :-
+ N>1,
+ M is N-1,
+ move(M,X,Z,Y),
+ move(1,X,Y,_),
+ move(M,Z,Y,X).
+```
+
+
+### Output:
+
+![image](https://github.com/Mena-Rossini/AI_Lab_2023-24/assets/102855266/eb8c4539-6345-4970-9241-d83c3b066c16)
+
+### Result:
+Thus the solution of Towers of Hanoi problem was found by logic programming.
+
 
 ### Output:
 
